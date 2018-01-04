@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vuejs:
+    build:
+      context: ./vuejs
+      dockerfile: Dockerfile
+    container_name: vuejs
+    volumes:
+      - ./vuejs:/var/www/vuejs
+    ports:
+      - "8000:80"
