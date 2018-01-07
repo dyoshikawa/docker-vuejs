@@ -8,7 +8,7 @@ RUN sed -i 's/user\ \ nginx\;/user\ \ 1000\;/g' /etc/nginx/nginx.conf \
  && mkdir /run/nginx
 ADD server.conf /etc/nginx/conf.d/default.conf
 
-# set workdir
+# set pre_workdir
 RUN mkdir -p /var/www/vuejs_pre
 WORKDIR /var/www/vuejs_pre
 
