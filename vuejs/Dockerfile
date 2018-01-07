@@ -2,8 +2,9 @@ FROM node:alpine
 
 # install bash nginx
 RUN apk --update add bash nginx \
- # setup nginx
- && sed -i 's/user\ \ nginx\;/user\ \ 1000\;/g' /etc/nginx/nginx.conf \
+
+# setup nginx
+RUN sed -i 's/user\ \ nginx\;/user\ \ 1000\;/g' /etc/nginx/nginx.conf \
  && mkdir /run/nginx
 ADD server.conf /etc/nginx/conf.d/default.conf
 
@@ -29,8 +30,9 @@ ADD style.scss src/scss/style.scss
 RUN npm install --save-dev webpack babel-cli babel-preset-env babel-loader \
       vue-template-compiler vue-loader node-sass \
  && npm install --save vue bootstrap-sass \
- # build js and sass
- && npm run build
+
+# build js and sass
+RUN npm run build
 
 # set workdir
 RUN mkdir /var/www/vuejs
