@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # install bash nginx
-RUN apk --update add bash nginx \
+RUN apk --update add bash nginx
 
 # setup nginx
 RUN sed -i 's/user\ \ nginx\;/user\ \ 1000\;/g' /etc/nginx/nginx.conf \
