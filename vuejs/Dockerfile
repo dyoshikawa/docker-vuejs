@@ -29,7 +29,7 @@ ADD style.scss src/scss/style.scss
 # install node-modules
 RUN npm install --save-dev webpack babel-cli babel-preset-env babel-loader \
       vue-template-compiler vue-loader node-sass \
- && npm install --save vue bootstrap-sass \
+ && npm install --save vue bootstrap-sass
 
 # build js and sass
 RUN npm run build
