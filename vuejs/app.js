@@ -1,4 +1,4 @@
-require('../scss/style.scss');
+import Vue from 'vue';
 
 var app = new Vue({
   el: '#app',

@@ -21,9 +21,9 @@ ADD app.js src/js/app.js
 ADD style.scss src/scss/style.scss
 
 RUN npm install --save-dev webpack babel-cli babel-preset-env babel-loader \
-      vue-template-compiler vue-loader \
-      node-sass extract-text-webpack-plugin css-loader sass-loader \
- && npm install --save vue bootstrap-sass
+      vue-template-compiler vue-loader node-sass \
+ && npm install --save vue bootstrap-sass \
+ && npm run build
 
 RUN mkdir /var/www/vuejs
 WORKDIR /var/www/vuejs
