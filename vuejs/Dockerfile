@@ -16,6 +16,7 @@ RUN mkdir -p src/js \
 ADD package.json package.json
 ADD .babelrc /var/www/vuejs_pre/.babelrc
 ADD webpack.config.js /var/www/vuejs_pre/webpack.config.js
+ADD index.html index.html
 ADD app.js src/js/app.js
 ADD style.scss src/scss/style.scss
 
