@@ -5,6 +5,6 @@ services:
       context: ./vuejs
     container_name: vuejs
     volumes:
-      - ./vuejs/var-www-vuejs:/var/www/vuejs
+      - ./volumes/vuejs.var-www-vuejs:/var/www/vuejs
     ports:
       - "8000:80"
