@@ -8,5 +8,5 @@ else
     sudo mv /var/www/vuejs-pre/.??* /var/www/vuejs/
     sudo rmdir /var/www/vuejs-pre
 fi
-chown -R 1000:1000 /var/www/vuejs
-nginx -g 'daemon off;'
+sudo chown -R 1000:1000 /var/www/vuejs
+sudo nginx -g 'daemon off;'
