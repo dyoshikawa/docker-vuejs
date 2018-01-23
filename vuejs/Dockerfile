@@ -17,7 +17,7 @@ ADD vuejs-pre /var/www/vuejs-pre
 WORKDIR /var/www/vuejs-pre
 
 # install node-modules
-RUN npm install
+RUN npm install \
  && npm run build
 
 # set workdir
