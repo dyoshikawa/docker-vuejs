@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 if [ -f /var/www/vuejs/index.html ]; then
     sudo rm -rf /var/www/vuejs-pre
     sudo npm install

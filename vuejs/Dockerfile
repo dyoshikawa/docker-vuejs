@@ -25,7 +25,7 @@ RUN mkdir /var/www/vuejs
 WORKDIR /var/www/vuejs
 
 # setup entrypoint
-ADD vuejs-entrypoint.sh /bin/vuejs-entrypoint.sh
-RUN chmod 777 /bin/vuejs-entrypoint.sh
+ADD vuejs-entrypoint.sh /vuejs-entrypoint.sh
+RUN chmod 777 /vuejs-entrypoint.sh
 USER node
-ENTRYPOINT ["sh", "/bin/vuejs-entrypoint.sh"]
+ENTRYPOINT ["bash", "/vuejs-entrypoint.sh"]
